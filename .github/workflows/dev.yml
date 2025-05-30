@@ -1,0 +1,10 @@
+name: "Dev"
+
+on:
+  push:
+    branches: [ "dev" ]
+
+jobs:
+  call-deploy:
+    - uses: ./.github/workflows/deploy.yml
+    - run: echo "Soy el Ambiente de dev"
