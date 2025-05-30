@@ -8,6 +8,7 @@ jobs:
   deploy-test:
     runs-on: ubuntu-latest
     step:
-      run: echo "make pull of code"
-      run: echo "run migrations"
-      run: echo "Publish version"
+      - uses: actions/checkout@v4
+      - run: echo "make pull of code"
+      - run: echo "run migrations"
+      - run: echo "Publish version"
