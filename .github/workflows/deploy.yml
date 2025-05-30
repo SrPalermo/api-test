@@ -9,6 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - run: echo "make pull of code"
-      - run: echo "run migrations"
-      - run: echo "Publish version"
+
+      - name: Install .NET 9 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x' # Usa la última versión estable disponible del SDK 9
+
+      - name: Pull code
+        run: echo "make pull of code"
+
+      - name: Run migrations
+        run: echo "run migrations"
+
+      - name: Publish version
+        run: echo "Publish version"
