@@ -1,0 +1,13 @@
+name: "Test"
+
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  deploy-test:
+    runs-on: ubuntu-latest
+    steps:
+      run: echo "make pull of code"
+      run: echo "run migrations"
+      run: echo "Publish version"
