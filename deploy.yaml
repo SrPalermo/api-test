@@ -7,7 +7,7 @@ on:
 jobs:
   deploy-test:
     runs-on: ubuntu-latest
-    steps:
+    step:
       run: echo "make pull of code"
       run: echo "run migrations"
       run: echo "Publish version"
